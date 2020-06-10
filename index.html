@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  body {
+    background: url('image/body.jpg') center no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+
+  .mySlides {
+    display: none;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ГУ "Чеховская cредняя школа</title>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+</head>
+
+<header class="header">
+  <div class="container1">
+    <div class="header_inner">
+      <div class="logo1">ГУ "Чеховская cредняя школа"</div>
+
+      <nav class="nav">
+        <img class="iconglav" src="image/iconglav.png" alt="">
+        <a class="nav__link" href="index.html">Главная</a>
+        <a class="nav__link" href="nav.html">Новости</a>
+        <a class="nav__link" href="blog.html">Блог Директора</a>
+        <a class="nav__link" href="lib.html">Библиотека</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<div class="intro"></div>
+
+<body>
+  <div class="slideshow-container">
+    <img src="image/1nz.gif"
+      style="margin-top: 50px; margin-left: -500px; position:absolute; transform: rotate(-45deg);">
+    <div class="mySlides fade">
+      <img src="image/slide1.jpg" style="width:100%; border-radius: 20px;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/slide2.jpg" style="width:100%; border-radius: 20px;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/slide3.jpg" style="width:100%; border-radius: 20px;">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="image/slide4.jpg" style="width:100%; border-radius: 20px;">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+  <div class="box">
+    <div>
+      <h1 class="h4">Администрация</h1>
+    </div>
+    <div>
+      <img class="img" src="image/zam.png">
+      <h1 class="h1">Зам/Директора</h1>
+    </div>
+    <div>
+      <img class="img" src="image/dir.jpg">
+      <h1 class="h2">Директор</h1>
+    </div>
+    <div>
+      <img class="img" src="image/zav.jpg">
+      <h1 class="h3">Завуч</h1>
+    </div>
+  </div>
+  <script>
+    var slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 10000); // Change image every 2 seconds
+    }
+  </script>
+</body>
+<footer>
+  <div class="footdown">
+    <p class="footerp">Saduakasov Temirlan ⓒ 2020</p>
+    <p class="footertext">КГУ «ЧЕХОВСКАЯ СРЕДНЯЯ ШКОЛА»</p>
+    <p class="adress"> СЕВЕРО-КАЗАХСТАНСКАЯ ОБЛАСТЬ, УАЛИХАНОВСКИЙ РАЙОН, С. АКБУЛАК</p>
+    <p class="number"><img class="teleicon" src="image/tele.png">87154225590</p>
+  </div>
+  <div class="faicons">
+    <a href="index.html" class="fa fa-twitter"></a>
+    <a href="index.html" class="fa fa-instagram"></a>
+    <a href="index.html" class="fa fa-google"></a>
+    <a href="index.html" class="fa fa-facebook"></a>
+  </div>
+</footer>
+
+</html>
